@@ -70,6 +70,7 @@ bool MacCloudStrategy::run() {
             }];
         }];
     }];
+    return true;
 }
 
 void MacCloudStrategy::notify(int received_count, int sent_count) {
