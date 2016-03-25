@@ -113,10 +113,14 @@ void MacFrontEnd::workaroundForBlacklistApp(NSString* string) {
 bool MacFrontEnd::isBlacklistApp() const {
   NSString* powerPoint = @"com.microsoft.powerpoint";
   NSString* pycharm = @"com.jetbrains.pycharm";
+  NSString* taskpaper = @"com.hogbaysoftware.TaskPaper3";
   if([[client_ bundleIdentifier] caseInsensitiveCompare:powerPoint] == NSOrderedSame) {
       return true;
   }
   if([[client_ bundleIdentifier] caseInsensitiveCompare:pycharm] == NSOrderedSame) {
+      return true;
+  }
+  if([[client_ bundleIdentifier] caseInsensitiveCompare:taskpaper] == NSOrderedSame) {
       return true;
   }
   return false;
